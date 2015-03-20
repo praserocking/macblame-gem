@@ -1,30 +1,23 @@
 # Macblame
 
-TODO: Write a gem description
+A better git blame to use in your Terminal.app This tool is used along with git to get a better version of "git blame ".. It will give you the percentage of contribution by individual users, so that it will be easier for you to blame the right person.. ;) This idea was conceived by Vignesh Jeyavel of Freshdesk and it's a cool idea!
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'macblame'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+install it yourself as:
 
     $ gem install macblame
 
 ## Usage
 
-TODO: Write usage instructions here
+	$ macblame <filename 1> <filename 2> ....
+
+all the files given as params should be tracked by git.
+
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/macblame/fork )
+1. Fork it ( https://github.com/praserocking/macblame-gem/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
