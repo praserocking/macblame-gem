@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'macblame'
+
+macblame = Macblame::Main.new
+macblame.run_app
