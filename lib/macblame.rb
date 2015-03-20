@@ -2,6 +2,17 @@ require "macblame/version"
 
 module Macblame
 	class Main
+		def run_app
+			if ARGV.length == 0
+				print_general_message
+			else
+				ARGV.each do |name|
+					macblame(name)
+				end
+			end
+		end
+
+		private
 	  	def macblame(file_name)
 			contributor = {}
 			output = open("| git blame "+file_name)
@@ -30,11 +41,13 @@ module Macblame
 			end
 			puts "* "*25
 		end
-
+		
+		private
 		def print_info(name,loc,commits)
 			puts "Contributor: \033[1;32m#{name}\033[0m with \033[1;32m#{((loc.to_f/commits.to_f)*100).round(2)} %\033[0m contribution with \033[1;32m#{loc}\033[0m lines of code"
 		end
 
+		private
 		def print_general_message
 			print "macblame - A better alternative to 'git blame'\n\n"
 			puts "Usage:"
@@ -43,16 +56,6 @@ module Macblame
 			print "macblame shows stats about the files tracked by git. It uses the output of 'git blame' and summarize it in a cleaner and intuitive format."
 			puts "\n\n Credits:"
 			print "Prasanna Sundar  -  prassi  -  praserocking@gmail.com"
-		end
-
-		def run_app
-			if ARGV.length == 0
-				print_general_message
-			else
-				ARGV.each do |name|
-					macblame(name)
-				end
-			end
 		end
 	end
 end
