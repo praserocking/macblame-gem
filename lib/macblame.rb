@@ -15,9 +15,7 @@ module Macblame
 		private
 	  	def macblame(file_name)
 			contributor = {}
-			output = open("| git blame "+file_name)
-			feed = output.read()
-			lines = feed.split("\n")
+			lines = open("| git blame "+file_name).read().split("\n")
 			loc = lines.length
 			lines.each do |line|
 				tokens = line.split("(")
