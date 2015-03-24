@@ -14,7 +14,15 @@ install it yourself as:
 
 all the files given as params should be tracked by git.
 
-
+## Sample output:
+```
+$ for file Marauders.map..
+$ Contributor: mooney with 25 % contribution with 50 lines of code
+$ Contributor: padfoot with 25 % contribution with 50 lines of code
+$ Contributor: wormtail with 25 % contribution with 50 lines of code
+$ Contributor: prongs with 25 % contribution with 50 lines of code
+* * * * * * * * * * * * * * * * * * * * * * * * *
+```
 ## Contributing
 
 1. Fork it ( https://github.com/praserocking/macblame-gem/fork )
